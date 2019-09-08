@@ -29,7 +29,7 @@ export class GeoBoxDirective implements OnChanges {
     const yMin = min(yList);
     const xMax = max(xList);
     const yMax = max(yList);
-    const bounds = Rect.from(xMin, yMin, xMax - xMin, yMax - yMin);
+    const bounds = Rect.of(xMin, yMin, xMax - xMin, yMax - yMin);
     this.renderer.setAttribute(this.element.nativeElement, 'width', bounds.width.toString());
     this.renderer.setAttribute(this.element.nativeElement, 'height', bounds.height.toString());
     this.renderer.setAttribute(this.element.nativeElement, 'viewBox', `${bounds.left} ${bounds.top} ${bounds.width} ${bounds.height}`);
