@@ -6,7 +6,7 @@ import { flatMap, max, min } from 'lodash';
 import { GeoProjectionService } from '../services/geo-projection.service';
 
 @Directive({
-  selector: 'svg[uiGeoBox]',
+  selector: '[uiGeoBox]',
 })
 export class GeoBoxDirective implements OnChanges {
 
